@@ -1,0 +1,38 @@
+From a search of multi_agent_search.ipynb
+
+The Ultimatum Game is a common experiment used in behavioral economics to study decision-making and fairness. In this game, one player (the proposer) is given a sum of money to split with another player (the responder). The responder can either accept or reject the offer. If accepted, the money is divided as proposed; if rejected, both players receive nothing. Studies have shown that gender bias may influence outcomes in the Ultimatum Game, particularly in how agentic women are perceived and treated. Overall, the Ultimatum Game provides insights into human behavior, fairness, and social preferences.
+
+Request to codex
+
+Prepare a code using ApenAI Agents with two agent playing the ultimatum game. 
+In each run of the game we can chose, independently for each playes, the characteristic of acting as: a rational economist; a beavioral economist; a regular person; a generous person; a stingy person; an egalitarian person.
+The Ultimatum Game is a common experiment used in behavioral economics to study decision-making and fairness. In this game, one player (the proposer) is given a sum of money to split with another player (the responder). The responder can either accept or reject the offer. If accepted, the money is divided as proposed; if rejected, both players receive nothing.
+
+
+Instruction to run:
+
+        1. (One‐time) make sure your API key is in the environment:
+
+           `export OPENAI_API_KEY="sk-..."`
+        2. Invoke the game:
+
+               python ultimatum_game.py \
+                 --amount 150 \
+                 --proposer "rational economist" \
+                 --responder "generous person"
+
+    – --amount (int) is the total pot (defaults to 100 if you omit it)
+    – --proposer and --responder must be one of:
+      • rational economist
+      • behavioral economist
+      • regular person
+      • generous person
+      • stingy person
+      • egalitarian person
+
+    If you rely on the default pot of $100, you can drop --amount, e.g.:
+
+    python ultimatum_game.py --proposer "regular person" --responder "stingy person"
+
+Correction of an error
+I run python ultimatum_game.py --proposer "regular person" --responder "stingy person" and I obtained the message You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
