@@ -1,0 +1,10 @@
+From a search of multi_agent_search.ipynb
+
+The Ultimatum Game is a common experiment used in behavioral economics to study decision-making and fairness. In this game, one player (the proposer) is given a sum of money to split with another player (the responder). The responder can either accept or reject the offer. If accepted, the money is divided as proposed; if rejected, both players receive nothing. Studies have shown that gender bias may influence outcomes in the Ultimatum Game, particularly in how agentic women are perceived and treated. Overall, the Ultimatum Game provides insights into human behavior, fairness, and social preferences.
+
+Request to codex
+
+Prepare a code using ApenAI Agents with two agents playing the ultimatum game. 
+In each run of the game we can chose, independently for each player, the characteristic of acting as: an homo oeconomicus, a classical maximizing economist; a beavioral economist; a regular person; a generous person; a stingy person; an egalitarian person; a sociologist; a psycologist; a random behaving person; an egoist person.
+The Ultimatum Game is a typical experiment used in behavioral economics to study decision-making and fairness. In this game, one player (the proposer) is given money to split with another player (the responder). The responder can either accept or reject the offer. If accepted, the money is divided as proposed; both players receive nothing if the offer is rejected.
+Consider that I have OpenAI version 1.77.0. Prepare the code for running in Jupyter and create an easy way to choose the two characters.
