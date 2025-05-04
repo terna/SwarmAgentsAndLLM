@@ -9,11 +9,10 @@ import re
 import openai
 from ipywidgets import interact, widgets
 import tool
+import pprint
 
 # Configure your OpenAI API key
-#openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
-#def setKey():
-#    openai.api_key = tool.tool()
+openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
 
 # Personality system-prompts
 personality_prompts = {
@@ -80,11 +79,15 @@ personality_prompts = {
 MODEL = "gpt-4.1"  #"gpt-3.5-turbo"
 DEFAULT_POT = 100  #10
 
+def is_running_in_binder():
+    return 'BINDER_SERVICE_HOST' in os.environ
+    
 def _setKey():
     openai.api_key = tool.tool()
 
-try: openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
-except: _setKey()
+if is_running_in_binder():
+    print("Running in Binder")
+    openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
 
 
 def _call_agent(messages, temperature=0.7):
