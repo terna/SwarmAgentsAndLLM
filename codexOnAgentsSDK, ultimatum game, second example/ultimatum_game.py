@@ -87,7 +87,7 @@ def _setKey():
 
 if is_running_in_binder():
     print("Running in Binder")
-    openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
+    openai.api_key = tool.tool()
 
 
 def _call_agent(messages, temperature=0.7):
