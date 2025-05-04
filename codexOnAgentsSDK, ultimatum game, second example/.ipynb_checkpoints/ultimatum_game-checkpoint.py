@@ -8,9 +8,12 @@ import json
 import re
 import openai
 from ipywidgets import interact, widgets
+import tool
 
 # Configure your OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
+#openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
+#def setKey():
+#    openai.api_key = tool.tool()
 
 # Personality system-prompts
 personality_prompts = {
@@ -74,11 +77,19 @@ personality_prompts = {
     ),
 }
 
-MODEL = "gpt-3.5-turbo"
-DEFAULT_POT = 10
+MODEL = "gpt-4.1"  #"gpt-3.5-turbo"
+DEFAULT_POT = 100  #10
+
+def _setKey():
+    openai.api_key = tool.tool()
+
+try: openai.api_key = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY_HERE")
+except: _setKey()
+
 
 def _call_agent(messages, temperature=0.7):
-    resp = openai.ChatCompletion.create(
+    # Use the new namespaced chat completions endpoint (openai>=1.0.0)
+    resp = openai.chat.completions.create(
         model=MODEL,
         messages=messages,
         temperature=temperature,
