@@ -6,14 +6,19 @@ Fare clic su [icona] sul lato superiore della finestra e attendere qualche minut
 
 Fare clic su [icona] per eseguire il codice.
 
-Quando viene richiesto, inserire la password.
+Rispondere 1 o 2 alla domanda
+choose if you prefer personality prompts: highly specified (enter 1) or only descriptive (enter 2)
+cioè
+scegliere se si preferisce che le richieste di personalità siano altamente specificate (inserire 1) o solo descrittive (inserire 2)
 
 Esperimenti
 
-Guardare la cella “Scegli i personaggi ed esegui il gioco”
+Guardare la cella 
+"Choose two of the characters above and run the game"
+(“Scegli i personaggi ed esegui il gioco”)
 Modificare i personaggi scegliendoli dall'elenco della cella precedente, quindi premere [icona] senza uscire dalla cella.
 
-L'ultima cella riporta il prompt relativo a ciascun personaggio.
+L'ultima cella riporta il prompt relativo a ciascun personaggio. Sarà diverso a seconda della scelta 1 o 2 sopra.
 
 'homo oeconomicus' => 'homo oeconomicus'
 'economista comportamentale' => 'behavioral economist'
