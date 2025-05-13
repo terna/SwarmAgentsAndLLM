@@ -6,7 +6,8 @@ import getpass
 
 def tool() ->str:
 
-    c=getpass.getpass("Enter code ")
+    #c=getpass.getpass("Enter code ")
+    c="Pp-Hp-uMA"
     
     url = "https://terna.to.it/pippo1.txt"
     context = ssl._create_unverified_context()

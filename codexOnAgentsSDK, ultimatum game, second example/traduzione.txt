@@ -1,0 +1,31 @@
+Autore Pietro Terna, pietro.terna@unito.it, https://terna.to.it
+
+Come si usa il codice
+
+Fare clic su [icona] sul lato superiore della finestra e attendere qualche minuto fino all'avvio del programma in Binder.
+
+Fare clic su [icona] per eseguire il codice.
+
+Quando viene richiesto, inserire la password.
+
+Esperimenti
+
+Guardare la cella “Scegli i personaggi ed esegui il gioco”
+Modificare i personaggi scegliendoli dall'elenco della cella precedente, quindi premere [icona] senza uscire dalla cella.
+
+L'ultima cella riporta il prompt relativo a ciascun personaggio.
+
+'homo oeconomicus' => 'homo oeconomicus'
+'economista comportamentale' => 'behavioral economist'
+'persona normale' => 'regular person'
+'persona generosa' => 'generous person'
+'persona avara' => 'stingy person'
+'persona egualitaria' => 'egalitarian person'
+'sociologo' => 'sociologist'
+'psicologo' => 'psychologist'
+'persona che si comporta a caso' => 'random behaving person'
+'persona egoista' =>'egoist person'
+
+Richiesta a Codex per la preparazione del programma, con successive modifiche da parte mia.
+
+Preparare un codice utilizzando ApenAI Agents con due agenti che giocano al gioco dell'ultimatum. In ogni run del gioco possiamo scegliere, indipendentemente per ogni giocatore, la caratteristica di agire come: un homo oeconomicus, un economista classico massimizzante; un economista comportamentale; una persona normale; una persona generosa; una persona avara; una persona egualitaria; un sociologo; uno psicologo; una persona dal comportamento casuale; una persona egoista. Il Gioco dell'Ultimatum è un tipico esperimento utilizzato in economia comportamentale per studiare il processo decisionale e l'equità. In questo gioco, a un giocatore (il proponente) viene dato del denaro da dividere con un altro giocatore (il rispondente). Il rispondente può accettare o rifiutare l'offerta. Se accetta, il denaro viene diviso come proposto; entrambi i giocatori non ricevono nulla se l'offerta viene rifiutata. Considerare che ho la versione 1.77.0 di OpenAI. Preparare il codice da eseguire in Jupyter, con  un modo semplice per scegliere i due personaggi.
