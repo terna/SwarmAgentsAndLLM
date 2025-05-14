@@ -6,10 +6,10 @@ Fare clic su [icona] sul lato superiore della finestra e attendere qualche minut
 
 Fare clic su [icona] per eseguire il codice.
 
-Rispondere 1 o 2 alla domanda
-choose if you prefer personality prompts: highly specified (enter 1) or only descriptive (enter 2)
+Rispondere 1 o 2 o 3 alla domanda
+choose if you prefer personality prompts: highly specified (enter 1) or only descriptive (enter 2) or over simplified (enter 3)
 cioè
-scegliere se si preferisce che le richieste di personalità siano altamente specificate (inserire 1) o solo descrittive (inserire 2)
+scegliere se si preferisce che le richieste di personalità siano: altamente specificate (inserire 1) o solo descrittive (inserire 2) o iper semplificate (inserire 3)
 
 Esperimenti
 

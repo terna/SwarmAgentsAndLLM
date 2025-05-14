@@ -138,6 +138,51 @@ personality_prompts2 = {
     ),
 }
 
+# Oversimplified by Pietro Terna
+personality_prompts3 = {
+    "homo oeconomicus": (
+        "You are homo oeconomicus: a fully rational utility maximizer. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "behavioral economist": (
+        "You are a behavioral economist. You balance fairness and self-interest. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "regular person": (
+        "You are a regular person: moderately self-interested but care about fairness. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "generous person": (
+        "You are a generous person. As proposer you often give more than one half of the total to the responder. "
+        "As responder you accept any positive offer. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "stingy person": (
+        "You are a stingy person. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "egalitarian person": (
+        "You are an egalitarian. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "sociologist": (
+        "You are a sociologist who upholds social norms. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "psychologist": (
+        "You are a psychologist sensitive to emotions. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "random behaving person": (
+        "You are a random behaving person. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+    "egoist person": (
+        "You are an egoist: you maximize your own payoff. "
+        "Always reply with the exact JSON requested, no extra text."
+    ),
+}
+
 MODEL = "gpt-4.1"  #"gpt-3.5-turbo"
 DEFAULT_POT = 100  #10
 
@@ -153,10 +198,11 @@ if is_running_in_binder():
 
 #choice of the type of prompt: highly specified or more open descriptive
 personality_choice = 0
-while not (int(personality_choice) == 1 or int(personality_choice) == 2): 
-    personality_choice=input("choose if you prefer personality prompts: highly specified (enter 1) or only descriptive (enter 2) ")
+while not (int(personality_choice) == 1 or int(personality_choice) == 2 or int(personality_choice) == 3): 
+    personality_choice=input("choose if you prefer personality prompts: highly specified (enter 1) or only descriptive (enter 2) or over simplified (enter 3) ")
     if int(personality_choice)==1: personality_prompts=personality_prompts1
     if int(personality_choice)==2: personality_prompts=personality_prompts2
+    if int(personality_choice)==3: personality_prompts=personality_prompts3
 
 
 def _call_agent(messages, temperature=0.7):
@@ -183,7 +229,9 @@ def play_ultimatum(proposer_type, responder_type, total=DEFAULT_POT):
     )
     if int(personality_choice)==1:
         temp1 = 1.0 if proposer_type == "random behaving person" else 0.3
-    else:
+    if int(personality_choice)==2:
+        temp1 = 1.0 if proposer_type == "random behaving person" else 1.5
+    if int(personality_choice)==3:
         temp1 = 1.0 if proposer_type == "random behaving person" else 1.5
     out1 = _call_agent([
         {"role": "system", "content": sys1},
