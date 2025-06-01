@@ -1,0 +1,13 @@
+name,risk_tolerance,aggression,analytical,budget,description
+Alice_Conservative,0.2,0.3,0.9,50.0,"Highly analytical, risk-averse, calculates expected values carefully"
+Bob_Aggressive,0.9,0.9,0.4,200.0,"High-risk taker, aggressive bidder, doesn't overthink decisions"
+Charlie_Balanced,0.5,0.5,0.7,100.0,"Balanced approach, moderately analytical and risk-tolerant"
+Diana_Cautious,0.3,0.2,0.8,75.0,"Very cautious, highly analytical, avoids escalation"
+Eve_Gambler,0.95,0.8,0.3,300.0,"Loves gambling, high-risk high-reward mentality"
+Frank_Strategic,0.4,0.6,0.95,150.0,"Extremely strategic, plans several moves ahead"
+Grace_Impulsive,0.7,0.9,0.2,120.0,"Makes quick decisions, acts on instinct rather than analysis"
+Henry_Patient,0.6,0.3,0.8,180.0,"Patient bidder, waits for the right moment to strike"
+Iris_Competitive,0.8,0.85,0.6,250.0,"Extremely competitive, hates losing more than loves winning"
+Jack_Opportunist,0.55,0.7,0.75,140.0,"Looks for opportunities, adapts strategy based on others' behavior"
+Kate_MinMaxer,0.35,0.4,0.9,90.0,"Minimizes maximum possible loss, very mathematical approach"
+Leo_Follower,0.45,0.5,0.5,110.0,"Tends to follow others' strategies, reactive rather than proactive"

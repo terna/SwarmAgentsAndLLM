@@ -1,0 +1,12 @@
+{
+  "auction_timestamp": "20250602_003037",
+  "prize_value": 100.0,
+  "total_rounds": 14,
+  "total_bids": 11,
+  "winner": "Iris_Competitive",
+  "winning_bid": 230.0,
+  "second_bid": 225.0,
+  "winner_profit": -130.0,
+  "total_revenue": 455.0,
+  "revenue_ratio": 4.55
+}
